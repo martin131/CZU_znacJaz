@@ -1,0 +1,135 @@
+<!-- Copyright 2017 Martin Matuna -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="matuna_znacJaz.xsl"?>
+<moviesInPocket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="matuna_znacJaz.xsd">
+  <settings>
+    <basicSettings>
+      <language>english</language>
+      <dateFormat>dd-mm-rrrr</dateFormat>
+      <theme>dark</theme>
+      <fastStartup>no</fastStartup>
+      <defaultFont>Comic Sans</defaultFont>
+      <defaultFontSize>12</defaultFontSize>
+      <defaultLocation>C:\\Zemedelec</defaultLocation>
+      <maxCacheSize>50000</maxCacheSize>
+      <logoutAfter>5</logoutAfter>
+    </basicSettings>
+    <userSettings>
+      <username>user</username>
+      <password>123456</password>
+      <saveLogin>true</saveLogin>
+    </userSettings>
+    <systemSettings>
+      <protocol>https</protocol>
+      <allowSecureConnection>TRUE</allowSecureConnection>
+      <serverUrl>server.nekde.com</serverUrl>
+      <urlPath>v1.1</urlPath>
+      <streamUrl>streamserver.nekde.com</streamUrl>
+    </systemSettings>
+    <playerSettings>
+      <defaultBitrate>2500</defaultBitrate>
+      <defaultLanguage>cs</defaultLanguage>
+      <defaultRatio>16:9</defaultRatio>
+      <defaultZoom>1</defaultZoom>
+      <subtitleEnabled>true</subtitleEnabled>
+      <defaultSubtitleLanguage>cs</defaultSubtitleLanguage>
+    </playerSettings>
+  </settings>
+  <rights>
+    <right name="user" id="1">
+      <login>1</login>
+      <play>1</play>
+      <delete>0</delete>
+      <admin>0</admin>
+      <ageLimit>0</ageLimit>
+    </right>
+    <right name="children" id="2">
+      <login>1</login>
+      <play>1</play>
+      <delete>0</delete>
+      <admin>0</admin>
+      <ageLimit>15</ageLimit>
+    </right>
+    <right name="admin" id="2">
+      <login>1</login>
+      <play>1</play>
+      <delete>1</delete>
+      <admin>1</admin>
+      <ageLimit>0</ageLimit>
+    </right>
+  </rights>
+  <genres>
+    <genre id="1">
+      <name>Comedy</name>
+    </genre>
+    <genre id="2">
+      <name>Action</name>
+    </genre>
+    <genre id="3">
+      <name>Thriller</name>
+    </genre>
+    <genre id="4">
+      <name>Horror</name>
+    </genre>
+    <genre id="5">
+      <name>Cartoon</name>
+    </genre>
+    <genre id="6">
+      <name>Sci-fi</name>
+    </genre>
+  </genres>
+  <movies>
+    <movie id="1">
+      <name>Vykoupení z vìznice Shawshank</name>
+      <year>1994</year>
+      <country>USA</country>
+      <genre>5</genre>
+      <rating>95</rating>
+      <director>Frank Darabont</director>
+      <description>Strach dìlá z lidí vìznì. Nadìje jim dává køídla. Film natoèený podle novely Stephena Kinga.</description>
+      <streamAvailable>1</streamAvailable>
+      <languages>
+        <language id="1" code="cs"></language>
+        <language id="2" code="en"></language>
+      </languages>
+      <bitrate>10000</bitrate>
+      <ageLimit>15</ageLimit>
+      <releaseDate>5-9-2004</releaseDate>
+    </movie>
+    <movie id="2">
+      <name>Forrest Gump</name>
+      <year>1994</year>
+      <country>USA</country>
+      <genre>3</genre>
+      <rating>95</rating>
+      <director>Robert Zemeckis</director>
+      <description>Zemeckisùv film je brilantním shrnutím dosavadních režisérových poznatkù o možnostech "comicsového" vyprávìní.</description>
+      <streamAvailable>1</streamAvailable>
+      <languages>
+        <language id="1" code="sk"></language>
+        <language id="2" code="en"></language>
+      </languages>
+      <bitrate>15000</bitrate>
+      <ageLimit>15</ageLimit>
+      <releaseDate>28-3-2001</releaseDate>
+    </movie>
+    <movie id="3">
+      <name>Zelená míle</name>
+      <year>1999</year>
+      <country>USA</country>
+      <genre>2</genre>
+      <rating>95</rating>
+      <director>Frank Darabont</director>
+      <description>Na zaèátku pøíbìhu se potkáme se starým mužem Paulem Edgecombem (Dabbs Greer).</description>
+      <streamAvailable>1</streamAvailable>
+      <languages>
+        <language id="1" code="cs"></language>
+        <language id="2" code="en"></language>
+        <language id="3" code="de"></language>
+      </languages>
+      <bitrate>10000</bitrate>
+      <ageLimit>0</ageLimit>
+      <releaseDate>1-1-2015</releaseDate>
+    </movie>
+  </movies>
+</moviesInPocket>
