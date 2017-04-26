@@ -7,10 +7,22 @@
     
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+
+  <style>
+    table td{
+      border:1px solid grey;
+    }
+    
+  </style>
+  
   </head>     
   <body>       
-    <header>         <h1>Dokumentace Značkovací jazyky</h1>         
+       
+    <main>    
+    <article> 
+      <header>  
+      <h1>Dokumentace Značkovací jazyky</h1>                
       <nav>       
       <ul>    
         <li><a href="#uvod">Úvod</a></li>           
@@ -18,10 +30,10 @@
         <li><a href="#zaver">Závěr</a></li>
         </ul>         
       </nav>       
-    </header>       
-    <main>    
-    <article>  
-      <section id="uvod">        <h2>Úvod</h2>        
+    </header>     
+      
+      <section id="uvod">              
+        <h2>Úvod</h2>  
          <p>
         Jako téme semestrální práce jsem si vybral fiktivní aplikaci <strong>Fimy v kapse</strong>. Tuto aplikaci jsem zvolil z toho důvodu, že se každý den ve svém životě potkávám s aplikací podobného typu.         
         </p>                      
@@ -35,58 +47,86 @@
         <ol>
         <li><a href="https://code.visualstudio.com/">Studio Code</a></li>
         <li><a href="https://www.google.com/chrome/"> Google Chrome</a></li>
-        <li></li>
         </ol>      
 
         <h3>Použité webové stránky</h3>
         <ol>
         <li><a href="https://www.w3schools.com/xml/xml_validator.asp">W3School XML Validator</a></li>
         <li><a href="https://validator.w3.org/">HTML Validator</a></li>
-        <li></li>
         </ol>       
                     
       </section>
       <section id="elementy">        <h2>Popis elementů</h2>                
       </section> 
-              <table border="1px">        
+              <table>        
           <thead>
-          <tr><td>Název elementu</td><td>Popis elementu</td><td>Omezení obsahu</td></tr>
+          <tr><td>Název elementu</td><td>Popis elementů</td><td>Omezení obsahu</td></tr>
           </thead>        
           <tbody>        
-            <tr><td>language</td><td>Určuje nastavený jazyk aplikace</td> <td>english, czech, slovak</td></tr>
-            <tr><td>dateFormat</td><td>Nastavuje formát data zobrazený napříč aplikací</td> <td></td></tr>                
+            <tr><td>language</td><td>Určuje nastavený jazyk aplikace</td> <td>cs, en, sk</td></tr>
+            <tr><td>dateFormat</td><td>Nastavuje formát data zobrazený napříč aplikací</td> <td>string</td></tr>                
             <tr><td>theme</td><td>Nastavuje tmavý nebo světlý vzhled aplikace</td> <td>dark, light</td></tr>
-            <tr><td>fastStartup</td><td>Urychluje rychlost načtení aplikace</td> <td></td></tr>
-            <tr><td>font</td><td>Písmo používané v aplikaci</td> <td></td></tr>
-            <tr><td>fontSize</td><td>Velikost písma v aplikaci</td> <td></td></tr>
-            <tr><td>tmpLocation</td><td>Cesta k dočasným souborům aplikace</td> <td></td></tr>
-            <tr><td>maxCacheSize</td><td>Maximální velikost dočasných soubrů aplikace</td> <td></td></tr>
-            <tr><td>logoutAfter</td><td>Určuje, po jaké době bude aplikace automaticky odhlášena</td> <td></td></tr>
+            <tr><td>fastStartup</td><td>Urychluje rychlost načtení aplikace</td> <td>boolean</td></tr>
+            <tr><td>font</td><td>Písmo používané v aplikaci</td> <td>string</td></tr>
+            <tr><td>fontSize</td><td>Velikost písma v aplikaci</td> <td>10 až 50</td></tr>
+            <tr><td>tmpLocation</td><td>Cesta k dočasným souborům aplikace</td> <td>string</td></tr>
+            <tr><td>maxCacheSize</td><td>Maximální velikost dočasných soubrů aplikace</td> <td>1000 až 100 000</td></tr>
+            <tr><td>logoutAfter</td><td>Určuje, po jaké době bude aplikace automaticky odhlášena</td> <td>0 až 60</td></tr>
             <tr><td colspan="3">&nbsp;</td></tr>
-            <tr><td>username</td><td>Uživalteské jméno uloženého uživatele</td> <td></td></tr>
-            <tr><td>password</td><td>Nebezpečně uložené heslo v XML souboru</td> <td></td></tr>
-            <tr><td>saveLogin</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr>            
+            <tr><td>username</td><td>Uživalteské jméno uloženého uživatele</td> <td>string</td></tr>
+            <tr><td>password</td><td>Nebezpečně uložené heslo v XML souboru</td> <td>string</td></tr>
+            <tr><td>saveLogin</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td>boolean</td></tr>            
             <tr><td colspan="3">&nbsp;</td></tr>
-            <tr><td>protocol</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>allowSecureConnection</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>serverUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>urlPath</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
+            <tr><td>protocol</td><td>Protokol použitý k připojení k API</td> <td>http, https</td></tr> 
+            <tr><td>allowSecureConnection</td><td>Určuje, zda má být vynuceno zabezpečené připojení</td> <td>boolean</td></tr> 
+            <tr><td>serverUrl</td><td>Adresa API serveru</td> <td>string</td></tr> 
+            <tr><td>urlPath</td><td>Cesta k REST API</td> <td>string</td></tr> 
+            <tr><td>streamUrl</td><td>Adresa streamovacího serveru</td> <td>string</td></tr> 
             <tr><td colspan="3">&nbsp;</td></tr>
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
-            <tr><td>streamUrl</td><td>Zajišťuje automacké ukládání přihlašovacích údajů</td> <td></td></tr> 
+            <tr><td>defaultBitrate</td><td>Výchozí nastavení kvality streamu</td> <td></td></tr> 
+            <tr><td>defaultLanguage</td><td>Výchozí nastavení audia</td> <td>cs, en, sk</td></tr> 
+            <tr><td>defaultRatio</td><td>Výchozí nastavení poměru stran</td> <td>string</td></tr> 
+            <tr><td>defaultZoom</td><td>Výchozí nastavení zvětšení obrazu</td> <td>1 až 10</td></tr> 
+            <tr><td>subtitleEnabled</td><td>Zajišťuje automacké zapnutí titulků</td> <td>boolean</td></tr> 
+            <tr><td>defaultSubtitleLanguage</td><td>Výchozí nastavení jazyka titulků</td> <td>cs, en, sk</td></tr> 
             <tr><td colspan="3">&nbsp;</td></tr>
-
-
-
-        </table>               
+            <tr><td>login</td><td>Určuje, zda se uživatel může přihlásit</td> <td>boolean</td></tr> 
+            <tr><td>play</td><td>Určuje, zda uživatel může přehrávat filmy</td> <td>boolean</td></tr> 
+            <tr><td>delete</td><td>Určuje, zda uživatel může mazat filmy</td> <td>boolean</td></tr> 
+            <tr><td>admin</td><td>Uživatel má právo upravovat ostatní uživatele</td> <td>boolean</td></tr>
+            <tr><td>ageLimit</td><td>Určuje věkové omezení uživatele</td> <td>0 až 18</td></tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr><td>genre.name</td><td>Název žánru</td> <td>string</td></tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr><td>movie.name</td><td>Název filmu</td> <td>string</td></tr>
+            <tr><td>movie.year</td><td>Rok vydání filmu</td> <td>short</td></tr>
+            <tr><td>movie.country</td><td>Země původu</td> <td>string</td></tr>
+            <tr><td>movie.genre</td><td>ID žánru</td> <td>short</td></tr>
+            <tr><td>movie.rating</td><td>Hodnocení filmu</td> <td>1 až 100</td></tr>
+            <tr><td>movie.director</td><td>Režisér filmu</td> <td>string</td></tr>
+            <tr><td>movie.description</td><td>Krátký popis filmu</td> <td>string</td></tr>
+            <tr><td>movie.streamAvailable</td><td>Informace o tom, zda je film dostupný k přehrání</td> <td>boolean</td></tr>
+            <tr><td>movie.languages.language.name</td><td>Název audia</td> <td>string</td></tr>
+            <tr><td>movie.bitrate</td><td>Maximální dostupný bitrate</td> <td>short</td></tr>
+            <tr><td>movie.ageLimit</td><td>Věkové omezení filmu</td> <td>ageLimit</td></tr>
+            <tr><td>movie.releaseDate</td><td>Datum vydání filmu</td> <td>string</td></tr>
+          </tbody> 
+        </table>     
+<br>
+                      <table>        
+          <thead>
+          <tr><td>Název atributu</td><td>Popis atributu</td></tr>
+          </thead>        
+          <tbody>        
+            <tr><td>rid</td><td>Jednoznačný identifikátor skupiny oprávnění</td></tr>
+            <tr><td>gid</td><td>Jednoznačný identifikátor žánru</td></tr>
+            <tr><td>mid</td><td>Jednoznačný identifikátor filmu</td></tr>
+            <tr><td>lid</td><td>Jednoznačný identifikátor zvukové stopy v rámci filmu</td></tr>
+            
+        </table>           
       <section id="zaver">         <h2>Závěr</h2>        
         <p>
-          Tato semestrální práce byla jednou z mých mála zku
+          Tato semestrální práce byla jednou z mých mála zkušeností s XML formátem. V životě se spíše setkávám s formátem JSON, který je dle mého názoru vhodnější forma uchování a přenosu dat mezi jednotlivými systémy. Formát XML se ale zase výborně hodí jako formát pro uchování konfiguračí, jak dokazuje například tato semestrální práce.
         </p>           
       </section> 
       </article>            

@@ -11,10 +11,10 @@
                     <xs:element type="xs:string" name="language"/>
                     <xs:element type="xs:string" name="dateFormat"/>
                     <xs:element type="xs:string" name="theme"/>
-                    <xs:element type="xs:string" name="fastStartup"/>
+                    <xs:element type="xs:boolean" name="fastStartup"/>
                     <xs:element type="xs:string" name="font"/>
                     <xs:element type="xs:byte" name="fontSize"/>
-                    <xs:element type="xs:string" name="location"/>
+                    <xs:element type="xs:string" name="tmpLocation"/>
                     <xs:element type="xs:int" name="maxCacheSize"/>
                     <xs:element type="xs:byte" name="logoutAfter"/>
                   </xs:sequence>
@@ -61,14 +61,14 @@
               <xs:element name="right" maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element type="xs:byte" name="login"/>
-                    <xs:element type="xs:byte" name="play"/>
-                    <xs:element type="xs:byte" name="delete"/>
-                    <xs:element type="xs:byte" name="admin"/>
-                    <xs:element type="xs:byte" name="ageLimit"/>
+                    <xs:element type="xs:boolean" name="login"/>
+                    <xs:element type="xs:boolean" name="play"/>
+                    <xs:element type="xs:boolean" name="delete"/>
+                    <xs:element type="xs:boolean" name="admin"/>
+                    <xs:element type="xs:boolean" name="ageLimit"/>
+                    <xs:element type="xs:string" name="name"/>
                   </xs:sequence>
-                  <xs:attribute type="xs:string" name="name" use="optional"/>
-                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                  <xs:attribute type="xs:byte" name="rid" use="optional"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -82,7 +82,7 @@
                   <xs:sequence>
                     <xs:element type="xs:string" name="name"/>
                   </xs:sequence>
-                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                  <xs:attribute type="xs:byte" name="gid" use="optional"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -101,7 +101,7 @@
                     <xs:element type="xs:byte" name="rating"/>
                     <xs:element type="xs:string" name="director"/>
                     <xs:element type="xs:string" name="description"/>
-                    <xs:element type="xs:byte" name="streamAvailable"/>
+                    <xs:element type="xs:boolean" name="streamAvailable"/>
                     <xs:element name="languages">
                       <xs:complexType>
                         <xs:sequence>
@@ -131,4 +131,55 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+    <!-- Nastavení omezení -->
+  <xs:simpleType name="vypzap"> <!-- Omezení zapnuto/vypnuto -->
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="chars"> <!-- Omezení nastavení charsetu -->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utf-8"/>
+      <xs:enumeration value="windows-1258"/>
+      <xs:enumeration value="utf-7"/>
+      <xs:enumeration value="iso-8859"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="jaz"> <!-- Omezení nastavení jazyku -->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="EN"/>
+      <xs:enumeration value="US"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="prot"> <!-- Omezení nastavení protokolů -->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="http"/>
+      <xs:enumeration value="https"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="email"> <!-- Omezení nastavení emailových adres -->
+    <xs:restriction base="xs:string">
+       <xs:pattern value="[^@]+@[^\.]+\..+"/> <!-- Regex pro rozpoznání emailové adresy -->
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="oprav"><!-- Omezení nastavení oprávnění-->
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="pop"><!-- Omezení nastavení popisu sekce-->
+    <xs:restriction base="xs:string">
+    	<xs:minLength value="10"/>
+      	<xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="Vek-omezeni"> <!-- Omezení nastavení věkového omezení -->
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="18"/>
+    </xs:restriction>
+  </xs:simpleType> 
 </xs:schema>

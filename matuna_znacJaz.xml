@@ -7,10 +7,10 @@
       <language>english</language>
       <dateFormat>dd-mm-rrrr</dateFormat>
       <theme>dark</theme>
-      <fastStartup>no</fastStartup>
+      <fastStartup>true</fastStartup>
       <font>Comic Sans</defaultFont>
       <fontSize>12</defaultFontSize>
-      <location>C:\\Zemedelec</defaultLocation>
+      <tmpLocation>C:\\Zemedelec</defaultLocation>
       <maxCacheSize>50000</maxCacheSize>
       <logoutAfter>5</logoutAfter>
     </basicSettings>
@@ -36,21 +36,24 @@
     </playerSettings>
   </settings>
   <rights>
-    <right name="user" id="1">
+    <right rid="1">
+      <name>user</name>
       <login>1</login>
       <play>1</play>
       <delete>0</delete>
       <admin>0</admin>
       <ageLimit>0</ageLimit>
     </right>
-    <right name="children" id="2">
+    <right rid="2">
+      <name>children</name>
       <login>1</login>
       <play>1</play>
       <delete>0</delete>
       <admin>0</admin>
       <ageLimit>15</ageLimit>
     </right>
-    <right name="admin" id="2">
+    <right rid="2">
+      <name>admin</name>
       <login>1</login>
       <play>1</play>
       <delete>1</delete>
@@ -59,27 +62,27 @@
     </right>
   </rights>
   <genres>
-    <genre id="1">
+    <genre gid="1">
       <name>Comedy</name>
     </genre>
-    <genre id="2">
+    <genre gid="2">
       <name>Action</name>
     </genre>
-    <genre id="3">
+    <genre gid="3">
       <name>Thriller</name>
     </genre>
-    <genre id="4">
+    <genre gid="4">
       <name>Horror</name>
     </genre>
-    <genre id="5">
+    <genre gid="5">
       <name>Cartoon</name>
     </genre>
-    <genre id="6">
+    <genre gid="6">
       <name>Sci-fi</name>
     </genre>
   </genres>
   <movies>
-    <movie id="1">
+    <movie mid="1">
       <name>Vykoupení z věznice Shawshank</name>
       <year>1994</year>
       <country>USA</country>
@@ -89,14 +92,14 @@
       <description>Strach dělá z lidá vězně. Naděje jim dává křídla. Film natočený podle novely Stephena Kinga.</description>
       <streamAvailable>1</streamAvailable>
       <languages>
-        <language id="1" code="cs"></language>
-        <language id="2" code="en"></language>
+        <language lid="1" code="cs"></language>
+        <language lid="2" code="en"></language>
       </languages>
       <bitrate>10000</bitrate>
       <ageLimit>15</ageLimit>
       <releaseDate>5-9-2004</releaseDate>
     </movie>
-    <movie id="2">
+    <movie mid="2">
       <name>Forrest Gump</name>
       <year>1994</year>
       <country>USA</country>
@@ -106,14 +109,14 @@
       <description>Zemeckisův film je brilantním shrnutím dosavadních režisérových poznatků o možnostech "comicsového" vyprávění.</description>
       <streamAvailable>1</streamAvailable>
       <languages>
-        <language id="1" code="sk"></language>
-        <language id="2" code="en"></language>
+        <language lid="1" code="sk"></language>
+        <language lid="2" code="en"></language>
       </languages>
       <bitrate>15000</bitrate>
       <ageLimit>15</ageLimit>
       <releaseDate>28-3-2001</releaseDate>
     </movie>
-    <movie id="3">
+    <movie mid="3">
       <name>Zelená míle</name>
       <year>1999</year>
       <country>USA</country>
@@ -123,9 +126,9 @@
       <description>Na začátku příběhu se potkáme se starým mužem Paulem Edgecombem (Dabbs Greer).</description>
       <streamAvailable>1</streamAvailable>
       <languages>
-        <language id="1" code="cs"></language>
-        <language id="2" code="en"></language>
-        <language id="3" code="de"></language>
+        <language lid="1" code="cs"></language>
+        <language lid="2" code="en"></language>
+        <language lid="3" code="de"></language>
       </languages>
       <bitrate>10000</bitrate>
       <ageLimit>0</ageLimit>
