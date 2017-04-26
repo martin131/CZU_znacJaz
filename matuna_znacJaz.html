@@ -27,6 +27,9 @@
       <ul>    
         <li><a href="#uvod">Úvod</a></li>           
         <li><a href="#metodika">Metodika</a></li>           
+        <li><a href="#elementy">Elementy</a></li>           
+        <li><a href="#atributy">Atributy</a></li>           
+        <li><a href="#transformace">Transformace</a></li>           
         <li><a href="#zaver">Závěr</a></li>
         </ul>         
       </nav>       
@@ -37,7 +40,7 @@
          <p>
         Jako téme semestrální práce jsem si vybral fiktivní aplikaci <strong>Fimy v kapse</strong>. Tuto aplikaci jsem zvolil z toho důvodu, že se každý den ve svém životě potkávám s aplikací podobného typu.         
         </p>                      
-        <p>XML soubor slouží k nastavení různých částí aplikace, dále obsahuje přístupová práva pro uživatele a malou lokálně stažených filmů.
+        <p>XML soubor slouží k nastavení různých částí aplikace, dále obsahuje přístupová práva pro uživatele a malou db lokálně stažených filmů.
         </p>
     
       </section>             
@@ -57,7 +60,7 @@
                     
       </section>
       <section id="elementy">        <h2>Popis elementů</h2>                
-      </section> 
+      
               <table>        
           <thead>
           <tr><td>Název elementu</td><td>Popis elementů</td><td>Omezení obsahu</td></tr>
@@ -111,8 +114,10 @@
             <tr><td>movie.ageLimit</td><td>Věkové omezení filmu</td> <td>ageLimit</td></tr>
             <tr><td>movie.releaseDate</td><td>Datum vydání filmu</td> <td>string</td></tr>
           </tbody> 
-        </table>     
-<br>
+        </table>  
+        </section> 
+        <section id="atributy"> 
+            <h2>Popis atributů</h2>
                       <table>        
           <thead>
           <tr><td>Název atributu</td><td>Popis atributu</td></tr>
@@ -123,7 +128,12 @@
             <tr><td>mid</td><td>Jednoznačný identifikátor filmu</td></tr>
             <tr><td>lid</td><td>Jednoznačný identifikátor zvukové stopy v rámci filmu</td></tr>
             
-        </table>           
+        </table>    
+        </section> 
+        <section id="transformace">
+          <h2>Popis transformace</h2>
+          <p>Transformace zajistí vybrání filmů, které jsou dostupné pro přehrání. Seznam těchto filmů vrátí ve formátu JSON.</p>
+        </section>        
       <section id="zaver">         <h2>Závěr</h2>        
         <p>
           Tato semestrální práce byla jednou z mých mála zkušeností s XML formátem. V životě se spíše setkávám s formátem JSON, který je dle mého názoru vhodnější forma uchování a přenosu dat mezi jednotlivými systémy. Formát XML se ale zase výborně hodí jako formát pro uchování konfiguračí, jak dokazuje například tato semestrální práce.

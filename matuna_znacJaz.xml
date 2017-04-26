@@ -8,9 +8,9 @@
       <dateFormat>dd-mm-rrrr</dateFormat>
       <theme>dark</theme>
       <fastStartup>true</fastStartup>
-      <font>Comic Sans</defaultFont>
-      <fontSize>12</defaultFontSize>
-      <tmpLocation>C:\\Zemedelec</defaultLocation>
+      <font>Comic Sans</font>
+      <fontSize>12</fontSize>
+      <tmpLocation>C:\\Zemedelec</tmpLocation>
       <maxCacheSize>50000</maxCacheSize>
       <logoutAfter>5</logoutAfter>
     </basicSettings>
@@ -21,7 +21,7 @@
     </userSettings>
     <systemSettings>
       <protocol>https</protocol>
-      <allowSecureConnection>TRUE</allowSecureConnection>
+      <allowSecureConnection>true</allowSecureConnection>
       <serverUrl>server.nekde.com</serverUrl>
       <urlPath>v1.1</urlPath>
       <streamUrl>streamserver.nekde.com</streamUrl>
@@ -38,26 +38,26 @@
   <rights>
     <right rid="1">
       <name>user</name>
-      <login>1</login>
-      <play>1</play>
-      <delete>0</delete>
-      <admin>0</admin>
-      <ageLimit>0</ageLimit>
+      <login>true</login>
+      <play>true</play>
+      <delete>false</delete>
+      <admin>false</admin>
+      <ageLimit>false</ageLimit>
     </right>
     <right rid="2">
       <name>children</name>
-      <login>1</login>
-      <play>1</play>
+      <login></login>
+      <play>true</play>
       <delete>0</delete>
       <admin>0</admin>
       <ageLimit>15</ageLimit>
     </right>
     <right rid="2">
       <name>admin</name>
-      <login>1</login>
-      <play>1</play>
-      <delete>1</delete>
-      <admin>1</admin>
+      <login>true</login>
+      <play>true</play>
+      <delete>true</delete>
+      <admin>true</admin>
       <ageLimit>0</ageLimit>
     </right>
   </rights>
@@ -90,7 +90,7 @@
       <rating>95</rating>
       <director>Frank Darabont</director>
       <description>Strach dělá z lidá vězně. Naděje jim dává křídla. Film natočený podle novely Stephena Kinga.</description>
-      <streamAvailable>1</streamAvailable>
+      <streamAvailable>true</streamAvailable>
       <languages>
         <language lid="1" code="cs"></language>
         <language lid="2" code="en"></language>
@@ -107,7 +107,7 @@
       <rating>95</rating>
       <director>Robert Zemeckis</director>
       <description>Zemeckisův film je brilantním shrnutím dosavadních režisérových poznatků o možnostech "comicsového" vyprávění.</description>
-      <streamAvailable>1</streamAvailable>
+      <streamAvailable>true</streamAvailable>
       <languages>
         <language lid="1" code="sk"></language>
         <language lid="2" code="en"></language>
@@ -124,7 +124,7 @@
       <rating>95</rating>
       <director>Frank Darabont</director>
       <description>Na začátku příběhu se potkáme se starým mužem Paulem Edgecombem (Dabbs Greer).</description>
-      <streamAvailable>1</streamAvailable>
+      <streamAvailable>false</streamAvailable>
       <languages>
         <language lid="1" code="cs"></language>
         <language lid="2" code="en"></language>
