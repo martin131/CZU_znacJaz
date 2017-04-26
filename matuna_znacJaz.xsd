@@ -8,12 +8,12 @@
               <xs:element name="basicSettings">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element type="xs:string" name="language"/>
+                    <xs:element type="xs:language" name="language"/>
                     <xs:element type="xs:string" name="dateFormat"/>
-                    <xs:element type="xs:string" name="theme"/>
+                    <xs:element type="xs:theme" name="theme"/>
                     <xs:element type="xs:boolean" name="fastStartup"/>
                     <xs:element type="xs:string" name="font"/>
-                    <xs:element type="xs:byte" name="fontSize"/>
+                    <xs:element type="xs:fontSize" name="fontSize"/>
                     <xs:element type="xs:string" name="tmpLocation"/>
                     <xs:element type="xs:int" name="maxCacheSize"/>
                     <xs:element type="xs:byte" name="logoutAfter"/>
@@ -32,8 +32,8 @@
               <xs:element name="systemSettings">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element type="xs:string" name="protocol"/>
-                    <xs:element type="xs:string" name="allowSecureConnection"/>
+                    <xs:element type="xs:protocol" name="protocol"/>
+                    <xs:element type="xs:boolean" name="allowSecureConnection"/>
                     <xs:element type="xs:string" name="serverUrl"/>
                     <xs:element type="xs:string" name="urlPath"/>
                     <xs:element type="xs:string" name="streamUrl"/>
@@ -44,11 +44,11 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="xs:short" name="defaultBitrate"/>
-                    <xs:element type="xs:string" name="defaultLanguage"/>
-                    <xs:element type="xs:string" name="defaultRatio"/>
+                    <xs:element type="xs:language" name="defaultLanguage"/>
+                    <xs:element type="xs:short" name="defaultRatio"/>
                     <xs:element type="xs:byte" name="defaultZoom"/>
                     <xs:element type="xs:boolean" name="subtitleEnabled"/>
-                    <xs:element type="xs:string" name="defaultSubtitleLanguage"/>
+                    <xs:element type="xs:language" name="defaultSubtitleLanguage"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -97,8 +97,8 @@
                     <xs:element type="xs:string" name="name"/>
                     <xs:element type="xs:short" name="year"/>
                     <xs:element type="xs:string" name="country"/>
-                    <xs:element type="xs:byte" name="genre"/>
-                    <xs:element type="xs:byte" name="rating"/>
+                    <xs:element type="xs:short" name="genre"/>
+                    <xs:element type="xs:rating" name="rating"/>
                     <xs:element type="xs:string" name="director"/>
                     <xs:element type="xs:string" name="description"/>
                     <xs:element type="xs:boolean" name="streamAvailable"/>
@@ -119,7 +119,7 @@
                       </xs:complexType>
                     </xs:element>
                     <xs:element type="xs:short" name="bitrate"/>
-                    <xs:element type="xs:byte" name="ageLimit"/>
+                    <xs:element type="xs:ageLimit" name="ageLimit"/>
                     <xs:element type="xs:string" name="releaseDate"/>
                   </xs:sequence>
                   <xs:attribute type="xs:byte" name="id" use="optional"/>
@@ -132,51 +132,40 @@
     </xs:complexType>
   </xs:element>
     <!-- Nastavení omezení -->
-  <xs:simpleType name="vypzap"> <!-- Omezení zapnuto/vypnuto -->
+  <xs:simpleType name="language"> 
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="cs"/>
+      <xs:enumeration value="en"/>
+      <xs:enumeration value="sk"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="theme"> 
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="dark"/>
+      <xs:enumeration value="light"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="fontSize">
     <xs:restriction base="xs:integer">
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="1"/>
-    </xs:restriction>
-  </xs:simpleType> 
-  <xs:simpleType name="chars"> <!-- Omezení nastavení charsetu -->
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="utf-8"/>
-      <xs:enumeration value="windows-1258"/>
-      <xs:enumeration value="utf-7"/>
-      <xs:enumeration value="iso-8859"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="jaz"> <!-- Omezení nastavení jazyku -->
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="CZ"/>
-      <xs:enumeration value="EN"/>
-      <xs:enumeration value="US"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="prot"> <!-- Omezení nastavení protokolů -->
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="http"/>
-      <xs:enumeration value="https"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="email"> <!-- Omezení nastavení emailových adres -->
-    <xs:restriction base="xs:string">
-       <xs:pattern value="[^@]+@[^\.]+\..+"/> <!-- Regex pro rozpoznání emailové adresy -->
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="oprav"><!-- Omezení nastavení oprávnění-->
-    <xs:restriction base="xs:integer">
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="3"/>
-    </xs:restriction>
-  </xs:simpleType> 
-  <xs:simpleType name="pop"><!-- Omezení nastavení popisu sekce-->
-    <xs:restriction base="xs:string">
     	<xs:minLength value="10"/>
-      	<xs:maxLength value="150"/>
+      	<xs:maxLength value="50"/>
     </xs:restriction>
   </xs:simpleType> 
-  <xs:simpleType name="Vek-omezeni"> <!-- Omezení nastavení věkového omezení -->
+  <xs:simpleType name="fontSize">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="10"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="rating"> 
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="ageLimit"> 
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="0"/>
       <xs:maxInclusive value="18"/>
