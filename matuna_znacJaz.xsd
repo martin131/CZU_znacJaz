@@ -12,9 +12,9 @@
                     <xs:element type="xs:string" name="dateFormat"/>
                     <xs:element type="xs:string" name="theme"/>
                     <xs:element type="xs:string" name="fastStartup"/>
-                    <xs:element type="xs:string" name="defaultFont"/>
-                    <xs:element type="xs:byte" name="defaultFontSize"/>
-                    <xs:element type="xs:string" name="defaultLocation"/>
+                    <xs:element type="xs:string" name="font"/>
+                    <xs:element type="xs:byte" name="fontSize"/>
+                    <xs:element type="xs:string" name="location"/>
                     <xs:element type="xs:int" name="maxCacheSize"/>
                     <xs:element type="xs:byte" name="logoutAfter"/>
                   </xs:sequence>

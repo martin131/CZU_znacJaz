@@ -1,5 +1,5 @@
-<!-- Copyright 2017 Martin Matuna -->
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Martin Matuna -->
 <?xml-stylesheet type="text/xsl" href="matuna_znacJaz.xsl"?>
 <moviesInPocket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="matuna_znacJaz.xsd">
   <settings>
@@ -8,9 +8,9 @@
       <dateFormat>dd-mm-rrrr</dateFormat>
       <theme>dark</theme>
       <fastStartup>no</fastStartup>
-      <defaultFont>Comic Sans</defaultFont>
-      <defaultFontSize>12</defaultFontSize>
-      <defaultLocation>C:\\Zemedelec</defaultLocation>
+      <font>Comic Sans</defaultFont>
+      <fontSize>12</defaultFontSize>
+      <location>C:\\Zemedelec</defaultLocation>
       <maxCacheSize>50000</maxCacheSize>
       <logoutAfter>5</logoutAfter>
     </basicSettings>
@@ -80,13 +80,13 @@
   </genres>
   <movies>
     <movie id="1">
-      <name>Vykoupení z vìznice Shawshank</name>
+      <name>VykoupenÃ­ z vÄ›znice Shawshank</name>
       <year>1994</year>
       <country>USA</country>
       <genre>5</genre>
       <rating>95</rating>
       <director>Frank Darabont</director>
-      <description>Strach dìlá z lidí vìznì. Nadìje jim dává køídla. Film natoèenı podle novely Stephena Kinga.</description>
+      <description>Strach dÄ›lÃ¡ z lidÃ¡ vÄ›znÄ›. NadÄ›je jim dÃ¡vÃ¡ kÅ™Ã­dla. Film natoÄenÃ½ podle novely Stephena Kinga.</description>
       <streamAvailable>1</streamAvailable>
       <languages>
         <language id="1" code="cs"></language>
@@ -103,7 +103,7 @@
       <genre>3</genre>
       <rating>95</rating>
       <director>Robert Zemeckis</director>
-      <description>Zemeckisùv film je brilantním shrnutím dosavadních reisérovıch poznatkù o monostech "comicsového" vyprávìní.</description>
+      <description>ZemeckisÅ¯v film je brilantnÃ­m shrnutÃ­m dosavadnÃ­ch reÅ¾isÃ©rovÃ½ch poznatkÅ¯ o moÅ¾nostech "comicsovÃ©ho" vyprÃ¡vÄ›nÃ­.</description>
       <streamAvailable>1</streamAvailable>
       <languages>
         <language id="1" code="sk"></language>
@@ -114,13 +114,13 @@
       <releaseDate>28-3-2001</releaseDate>
     </movie>
     <movie id="3">
-      <name>Zelená míle</name>
+      <name>ZelenÃ¡ mÃ­le</name>
       <year>1999</year>
       <country>USA</country>
       <genre>2</genre>
       <rating>95</rating>
       <director>Frank Darabont</director>
-      <description>Na zaèátku pøíbìhu se potkáme se starım muem Paulem Edgecombem (Dabbs Greer).</description>
+      <description>Na zaÄÃ¡tku pÅ™Ã­bÄ›hu se potkÃ¡me se starÃ½m muÅ¾em Paulem Edgecombem (Dabbs Greer).</description>
       <streamAvailable>1</streamAvailable>
       <languages>
         <language id="1" code="cs"></language>
